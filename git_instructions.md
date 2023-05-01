@@ -14,10 +14,10 @@
 
 ---
 
-### コメントの書き方
+### [コメントの書き方]
 テンプレート -> `[status] messag here!!`
 
-| [status] | mean |
+| [status] | meaning |
 | --- | --- |
 | [add] | 新規ファイルの追加 |
 | [update] | 既存ファイルを変更 |
