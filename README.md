@@ -3,9 +3,9 @@
 
 | PATH | DESCRIPTION |
 | --- | --- |
-| `/`  | TOPページ |
-| `/quality` | 推移民の質の向上について |
-| `/risk`  | 睡眠の危険性について |
-| `/community`   | 睡眠関係についてのコミュニティ案内 |
-| `/implementation`  | 企業向けページ |
-| `/quiz`  | 睡眠に関するクイズ |
+| `/index.html`  | TOPページ |
+| `/quality.html` | 推移民の質の向上について |
+| `/risk.html`  | 睡眠の危険性について |
+| `/community.html`   | 睡眠関係についてのコミュニティ案内 |
+| `/implementation.html`  | 企業向けページ |
+| `/quiz.html`  | 睡眠に関するクイズ |
