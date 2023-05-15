@@ -4,7 +4,7 @@
 | PATH | DESCRIPTION |
 | --- | --- |
 | `/index.html`  | TOPページ |
-| `/quality.html` | 推移民の質の向上について |
+| `/quality.html` | 睡眠の質の向上について |
 | `/risk.html`  | 睡眠の危険性について |
 | `/community.html`   | 睡眠関係についてのコミュニティ案内 |
 | `/implementation.html`  | 企業向けページ |
