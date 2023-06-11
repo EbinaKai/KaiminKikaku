@@ -6,6 +6,7 @@
 | `/index.html`  | TOPページ |
 | `/quality.html` | 睡眠の質の向上について |
 | `/risk.html`  | 睡眠の危険性について |
+| `/study.html`  | 睡眠と勉強の関係 |
 | `/community.html`   | 睡眠関係についてのコミュニティ案内 |
 | `/implementation.html`  | 企業向けページ |
 | `/quiz.html`  | 睡眠に関するクイズ |
