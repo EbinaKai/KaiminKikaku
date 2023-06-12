@@ -16,10 +16,6 @@
   }
 }
 
-.table thead th {
-  min-width: 10%;
-}
-
 .modal-content p {
   color: rgb(230, 49, 49);
 }
@@ -87,4 +83,18 @@
 
 .modal-content p.collect {
   color: rgb(85, 175, 85);
+}
+
+/* table  */
+.result-list h4 {
+  font-size: 1.4em;
+}
+.result-list p {
+  margin-bottom: 2px;
+}
+.correct-ans::before {
+  content: "正答: "
+}
+.your-ans::before {
+  content: "あなたの解答: "
 }
