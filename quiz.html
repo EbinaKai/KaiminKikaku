@@ -27,7 +27,7 @@
     <header class="d-flex align-items-center flex-grow-1 sticky-top">
       <input type="checkbox" id="overlay-input" />
       <label for="overlay-input" id="overlay-button"><span></span></label>
-      <nav id="overlay" class="w-75">
+      <nav id="overlay">
         <ul class="uppercase-text d-flex gap-2 justify-content-between align-items-center mb-0">
           <li><a href="index.html">快眠企画</a></li>
           <li><a href="risk.html">risk</a></li>
@@ -43,9 +43,9 @@
     <main>
       <h1 class="text-center mb-5">クイズページ</h1>
       <section class="container mb-3">
-        <h5 class="q">問題文サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</h5>
-        <div>
-          <img class="img-fluid" src="assets/images/question.jpg" alt="サンプル画像">
+        <div id="quiz"  class="d-none">
+          <h5 class="q">問題文サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</h5>
+          <div class="w-50 mx-auto"><img class="img-fluid" src="assets/images/question.jpg" alt="サンプル画像"></div>
           <div class="ans row my-3">
             <button class="btn btn-primary col-sm mx-2" data-id="anser_1">解答1</button>
             <button class="btn btn-primary col-sm mx-2" data-id="anser_2">解答2</button>
@@ -53,8 +53,31 @@
             <button class="btn btn-primary col-sm mx-2" data-id="anser_4">解答4</button>
           </div>
         </div>
-        <div class="modal-open">モーダルを開く</div>
-
+        <div id="result">
+          <h2>結果</h2>
+          <h3 class="mt-5">
+            正答率
+            <span class="correct_answer_rate">30</span>
+          </h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" width="10%">No.</th>
+                <th scope="col" width="50%">問題文</th>
+                <th scope="col" width="20%">正答</th>
+                <th scope="col" width="20%">あなたの解答</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</td>
+                <td>選択肢1</td>
+                <td>選択肢2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
 

@@ -16,6 +16,25 @@
   }
 }
 
+.table thead th {
+  min-width: 10%;
+}
+
+.modal-content p {
+  color: rgb(230, 49, 49);
+}
+
+.modal-content p.incorrect {
+  color: rgb(65, 65, 183);
+}
+
+.correct_answer_rate {
+  margin-left: 5px;
+}
+.correct_answer_rate::after {
+  content: "%";
+}
+
 /* modal */
 .modal-container{
   position: fixed;

@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  // get quiz list
   $.ajax({
     type: "GET",
     url: "assets/json/quiz.json",
@@ -6,11 +8,14 @@ $(document).ready(function() {
   }).done( json => { quizStart(json); })
   .fail(  err => { throw err });
 
+  // set button events
   for (let i = 1; i <= 4; i++) {
     let key = "anser_" + String(i);
     $(`[data-id='${key}']`).click(function() {checkAns(i); });
   }
+  const anser_store = []
 
+  // quizStart -> setQuestion -> checkAns -> setQuestion ... 
   function quizStart(json) {
     console.debug(json);
     window.data_length = json.length;
@@ -19,44 +24,57 @@ $(document).ready(function() {
     window.data = json;
     setQuestion();
   }
+
   function setQuestion() {
+    close_modal();
+    if (current_q == data_length) {
+      console.debug("finish");
+      return;
+    }
+
+    $(".q").text(data[current_q].question);
     for (let i = 1; i <= 4; i++) {
       let key = "anser_" + String(i);
       $(`[data-id='${key}']`)
         .text(data[current_q][key]);
     }
   }
+
   function checkAns(i) {
-    if ( data[current_q].collect_anser == i ) {
-      correct_count ++;
-      console.debug("yes");
-    } else {
-      console.debug("no");
-    }
+    const result = data[current_q].collect_anser == i;
+    if ( result ) { correct_count ++; }
 
     current_q ++;
-    console.debug(current_q)
-    if (current_q != data_length) {
-      setTimeout(setQuestion, 300);
+    open_modal(result);
+    setTimeout(setQuestion, 500);
+  }
+
+  // modal
+  //開くボタンをクリックしたらモーダルを表示する
+  $('.modal-open').on('click',open_modal);;
+
+  // 変数に要素を入れる
+  const container = $('.modal-container');
+
+  function open_modal(result=true) {
+    if (result) {
+      $(".modal-content p")
+        .text("正解")
+        .removeClass("incorrect");
     } else {
-      console.debug("finish");
+      $(".modal-content p")
+        .text("不正解")
+        .addClass("incorrect");
+    }
+
+    container.addClass('active');
+    return false;
+  }
+
+  function close_modal() {
+    if(container.hasClass('active')) {
+      container.removeClass('active');
     }
   }
 
-  // 変数に要素を入れる
-  var open = $('.modal-open');
-  const container = $('.modal-container');
-
-  //開くボタンをクリックしたらモーダルを表示する
-  open.on('click',function(){ 
-    container.addClass('active');
-    return false;
-  });
-
-  //モーダルの外側をクリックしたらモーダルを閉じる
-  $(document).on('click',function(e) {
-    if(!$(e.target).closest('.modal-body').length) {
-      container.removeClass('active');
-    }
-  });
 });

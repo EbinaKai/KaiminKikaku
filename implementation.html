@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="G8">
-    <title>企業向けページ | 快眠企画</title>
-    <link rel="icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="author" content="G8">
+  <title>企業向けページ | 快眠企画</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/hamberger.css">
 
-    <!-- javascript -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js" defer></script>
+  <!-- javascript -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
+
 <body>
   <div id="wrapper">
-    <header>
-      <h1>快眠企画</h1>
+    <header class="d-flex align-items-center flex-grow-1 sticky-top">
+      <input type="checkbox" id="overlay-input" />
+      <label for="overlay-input" id="overlay-button"><span></span></label>
+      <nav id="overlay">
+        <ul class="uppercase-text d-flex gap-2 justify-content-between align-items-center mb-0">
+          <li><a href="index.html">快眠企画</a></li>
+          <li><a href="risk.html">risk</a></li>
+          <li><a href="study.html">study</a></li>
+          <li><a href="quality.html">quality</a></li>
+          <li><a href="community.html">community</a></li>
+          <li><a href="implementation.html">implementation</a></li>
+          <li><a href="quiz.html">quiz</a></li>
+          <li><a href="about us.html">about us</a></li>
+      </nav>
     </header>
+    
     <main>
+      <h1 class="text-center mb-5">快眠企画</h1>
+
+      <section class="container mb-3">
+        <h2>サンプルタイトル</h2>
+        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        <img class="img-fluid pb-3" src="assets/images/sample_image.jpg" alt="サンプル画像">
+      </section>  
       
+      <section class="container mb-3">
+        <h2>サンプルタイトル</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="img-box">
+              <img src="assets/images/sample_image.jpg" alt="サンプル画像">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mb-3">
+        <h2>サンプルタイトル</h2>
+        <ul class="ml-4">
+          <li>アイテムアイテムアイテムアイテムアイテム</li>
+          <li>アイテムアイテムアイテムアイテムアイテム</li>
+          <li>アイテムアイテムアイテムアイテムアイテム</li>
+          <li>アイテムアイテムアイテムアイテムアイテム</li>
+          <li>アイテムアイテムアイテムアイテムアイテム</li>
+        </ul>
+      </section>  
     </main>
+
     <footer>
-		  © G8
+		  © G8 Ebinakai
     </footer>
-    </div>
+  </div>
 </body>
 </html>
