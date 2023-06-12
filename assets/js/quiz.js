@@ -13,7 +13,7 @@ $(document).ready(function() {
     let key = "anser_" + String(i);
     $(`[data-id='${key}']`).click(function() {checkAns(i); });
   }
-  const anser_store = []
+  const result_store = []
 
   // quizStart -> setQuestion -> checkAns -> setQuestion ... 
   function quizStart(json) {
@@ -29,6 +29,7 @@ $(document).ready(function() {
     close_modal();
     if (current_q == data_length) {
       console.debug("finish");
+      draw_result();
       return;
     }
 
@@ -43,10 +44,36 @@ $(document).ready(function() {
   function checkAns(i) {
     const result = data[current_q].collect_anser == i;
     if ( result ) { correct_count ++; }
+    result_store.push(
+      {
+        question: data[current_q].question,
+        correct_anser: data[current_q]["anser_" + String(data[current_q].collect_anser)],
+        your_anser: data[current_q]["anser_" + String(i)]
+      }
+    )
 
     current_q ++;
     open_modal(result);
     setTimeout(setQuestion, 500);
+  }
+
+  function draw_result() {
+    $result_list = $(".result-list");
+    result_store.forEach(function(result) {
+      let element = $.parseHTML(`
+        <div class="mb-5">
+          <h4></h4>
+          <p class="correct-ans"></p>
+          <p class="your-ans"></p>
+        </div>
+      `);
+      $(element).find("h4").text(result.question);
+      $(element).find(".correct-ans").text(result.correct_anser);
+      $(element).find(".your-ans").text(result.your_anser);
+      $result_list.append(element);
+    });
+    $("#result").removeClass("d-none");
+    $("#quiz").addClass("d-none");
   }
 
   // modal
