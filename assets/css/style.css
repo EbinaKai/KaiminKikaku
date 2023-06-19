@@ -73,18 +73,21 @@ section {
   border-bottom: 2px solid #659DBF;
 }
 
-section h2, section h6 {
+section h2 {
   font-size: 1.6rem;
   border-left: 5px solid #9AB5D9;
   padding-left: 4px;
-}
-
-section h2 {
   margin-bottom: 30px;
 }
 
 section h3 {
   font-size: 1.3rem;
+}
+
+section h4 {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .theme-text {
