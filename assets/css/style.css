@@ -90,6 +90,15 @@ section h4 {
   font-weight: bold;
 }
 
+.list-border-bottom > li {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #659DBF;
+}
+.list-border-bottom > li:last-child {
+  border: none;
+}
+
 .theme-text {
   text-decoration: underline;
   text-decoration-color: #72DBF2;
