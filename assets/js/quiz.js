@@ -72,6 +72,10 @@ $(document).ready(function() {
       $(element).find(".your-ans").text(result.your_anser);
       $result_list.append(element);
     });
+
+    console.debug(current_q, correct_count, Math.round(correct_count / current_q * 1000));
+    let correct_answer_rate = Math.round(correct_count / current_q * 1000) / 10;
+    $(".correct_answer_rate").text(correct_answer_rate);
     $("#result").removeClass("d-none");
     $("#quiz").addClass("d-none");
   }

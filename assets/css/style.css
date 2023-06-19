@@ -46,6 +46,7 @@ header nav ul li a:hover {
 main {
   min-height: calc(100vh - 80px);
   padding: 2rem 2rem 0 2rem;
+  letter-spacing: .15rem;
 }
 
 footer {
@@ -68,24 +69,62 @@ ul {
   margin-bottom: 20px;
 }
 
-section h2, section h6 {
+section {
+  border-bottom: 2px solid #659DBF;
+}
+
+section h2 {
   font-size: 1.6rem;
   border-left: 5px solid #9AB5D9;
   padding-left: 4px;
+  margin-bottom: 30px;
 }
 
-section {
+section h3 {
+  font-size: 1.3rem;
+}
+
+section h4 {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.list-border-bottom > li {
+  margin-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 2px solid #659DBF;
+}
+.list-border-bottom > li:last-child {
+  border: none;
+}
+
+.theme-text {
+  text-decoration: underline;
+  text-decoration-color: #72DBF2;
 }
 
 .btn-list a:hover {
   text-decoration-color: white;
 }
 
-.theme-label {
-  display: block;
+#member-cards {
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 900px) {
-  
+#member-cards .card-title {
+  text-transform: uppercase;
+}
+
+#reference-list li a {
+  color: #659DBF;
+  text-decoration: underline;
+  text-decoration-color: #659DBF; 
+}
+
+#reference-list li a:hover {
+  color: #9AB5D9;
+  text-decoration: underline;
+  text-decoration-color: #9AB5D9; 
 }
