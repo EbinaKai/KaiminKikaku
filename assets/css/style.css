@@ -99,6 +99,18 @@ section h4 {
   border: none;
 }
 
+.btn-blue {
+  color: #fff;
+  background-color: #659DBF;
+  border-color: #659DBF;
+}
+
+.btn-blue:hover {
+  color: #fff;
+  background-color: #72DBF2;
+  border-color: #72DBF2;
+}
+
 .theme-text {
   text-decoration: underline;
   text-decoration-color: #72DBF2;
