@@ -67,12 +67,12 @@ $(document).ready(function() {
   }
 
   function checkAns(i) {
-    const result = data[current_q].collect_anser == i;
+    const result = (1 == i);
     if ( result ) { correct_count ++; }
     result_store.push(
       {
         question: data[current_q].question,
-        correct_anser: data[current_q]["anser_" + String(data[current_q].collect_anser)],
+        correct_anser: data[current_q]["anser_1"],
         your_anser: data[current_q]["anser_" + String(i)]
       }
     )
