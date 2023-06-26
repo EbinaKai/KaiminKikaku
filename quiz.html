@@ -42,10 +42,10 @@
     
     <main>
       <h1 class="text-center mb-5">クイズページ</h1>
-      <section class="container mb-3">
-        <div id="quiz">
+      <section id="quiz" class="container mb-3">
+        <div>
           <h5 class="q">問題文サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</h5>
-          <div class="w-50 mx-auto"><img class="img-fluid" src="assets/images/question.jpg" alt="サンプル画像"></div>
+          <div class="mx-auto" style="max-width: 640px;"><img class="img-fluid" src="assets/images/question.jpg" alt="サンプル画像"></div>
           <div class="ans row">
             <button class="btn btn-primary col-sm mx-2 my-2" data-id="anser_1">解答1</button>
             <button class="btn btn-primary col-sm mx-2 my-2" data-id="anser_2">解答2</button>
@@ -53,8 +53,10 @@
             <button class="btn btn-primary col-sm mx-2 my-2" data-id="anser_4">解答4</button>
           </div>
         </div>
+      </section>
 
-        <div id="result" class="d-none">
+      <section id="result" class="container mb-3 d-none">
+        <div>
           <h2>結果</h2>
           <h3 class="mt-5">
             正答率
