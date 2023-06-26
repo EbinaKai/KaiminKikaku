@@ -53,6 +53,9 @@ $(document).ready(function() {
         .text(data[current_q][key]);
     }
 
+    // set image
+    $('#quiz img.img-fluid').attr('src', 'assets/images/quiz/quiz-' + String(data[current_q].id) + '.jpg');
+
     // shuffle elements
     let elements = $('.ans button')
     elements.shuffle();
@@ -63,7 +66,6 @@ $(document).ready(function() {
       let key = "anser_" + String(i);
       $(`[data-id='${key}']`).click(function() {checkAns(i); });
     }
-    
   }
 
   function checkAns(i) {
