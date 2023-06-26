@@ -1,5 +1,23 @@
 $(document).ready(function() {
 
+  // shuffle elements function
+  $.fn.shuffle = function() {
+    
+    var currentIndex = this.length, temporaryValue, randomIndex;
+    console.debug(currentIndex);
+
+    // Fisher-Yatesアルゴリズムを使用して要素の順番をシャッフル
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = this[currentIndex];
+      this[currentIndex] = this[randomIndex];
+      this[randomIndex] = temporaryValue;
+    }
+
+    return this;
+  };
+
   // get quiz list
   $.ajax({
     type: "GET",
@@ -8,11 +26,6 @@ $(document).ready(function() {
   }).done( json => { quizStart(json); })
   .fail(  err => { throw err });
 
-  // set button events
-  for (let i = 1; i <= 4; i++) {
-    let key = "anser_" + String(i);
-    $(`[data-id='${key}']`).click(function() {checkAns(i); });
-  }
   const result_store = []
 
   // quizStart -> setQuestion -> checkAns -> setQuestion ... 
@@ -39,6 +52,18 @@ $(document).ready(function() {
       $(`[data-id='${key}']`)
         .text(data[current_q][key]);
     }
+
+    // shuffle elements
+    let elements = $('.ans button')
+    elements.shuffle();
+    $('.ans').empty().append(elements);
+    
+    // set button events
+    for (let i = 1; i <= 4; i++) {
+      let key = "anser_" + String(i);
+      $(`[data-id='${key}']`).click(function() {checkAns(i); });
+    }
+    
   }
 
   function checkAns(i) {
