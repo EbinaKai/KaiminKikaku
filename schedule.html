@@ -160,11 +160,11 @@
 
           <div class="form-group">
             <h3>希望勉強時間</h3>
-            <label for="study-hours"><span class="range-value"></span></label>
-            <input type="range" class="custom-range" min="2" max="10" id="study-hours">
+            <label for="study-hours"><span class="range-value">2</span>時間</label>
+            <input type="range" class="custom-range" min="2" max="10" value="2" id="study-hours">
           </div>
 
-          <button type="submit" class="btn btn-block btn-blue">Submit</button>
+          <a href="assets/images/schedule.jpg" target="_blank"></a><button type="submit" class="btn btn-block btn-blue">Submit</button>
         </form>
       </section>
     </main>
@@ -173,5 +173,11 @@
 		  © G8-2
     </footer>
     </div>
+  <script>
+    let $range = $(".range-value");
+    $('#study-hours').change( function() {
+      $range.text($(this).val());
+    });
+  </script>
   </body>
 </html>
