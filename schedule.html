@@ -71,16 +71,100 @@
                 <label class="form-check-label" for="mode-general">一般用</label>
               </div>
           </div>
+          
           <div class="form-group">
-            <label for="InputEmail">Email</label>
-            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <H3>家を出る時間</H3>
+            <select class="custom-select">
+                <option value="6:00">6:00</option>
+                <option value="6:15">6:15</option>
+                <option value="6:30">6:30</option>
+                <option value="6:45">6:45</option>
+                <option value="7:00">7:00</option>
+                <option value="7:15">7:15</option>
+                <option value="7:30">7:30</option>
+                <option value="7:45">7:45</option>
+                <option value="8:00">8:00</option>
+                <option value="8:15">8:15</option>
+                <option value="8:30">8:30</option>
+                <option value="8:45">8:45</option>
+                <option value="9:00">9:00</option>
+                <option value="9:15">9:15</option>
+                <option value="9:30">9:30</option>
+                <option value="9:45">9:45</option>
+                <option value="10:00">10:00</option>
+                <option value="10:15">10:15</option>
+                <option value="10:30">10:30</option>
+                <option value="10:45">10:45</option>
+                <option value="11:00">11:00</option>
+                <option value="11:15">11:15</option>
+                <option value="11:30">11:30</option>
+                <option value="11:45">11:45</option>
+                <option value="12:00">12:00</option>
+            </select>
           </div>
+          
           <div class="form-group">
-            <label for="FormControlTextarea">Message</label>
-            <textarea class="form-control" id="FormControlTextarea" rows="5" placeholder="Message here"></textarea>
+            <H3>帰宅時間</H3>
+            <select class="custom-select">
+                <option value="14:00">14:00</option>
+                <option value="14:15">14:15</option>
+                <option value="14:30">14:30</option>
+                <option value="14:45">14:45</option>
+                <option value="15:00">15:00</option>
+                <option value="15:15">15:15</option>
+                <option value="15:30">15:30</option>
+                <option value="15:45">15:45</option>
+                <option value="16:00">16:00</option>
+                <option value="16:15">16:15</option>
+                <option value="16:30">16:30</option>
+                <option value="16:45">16:45</option>
+                <option value="17:00">17:00</option>
+                <option value="17:15">17:15</option>
+                <option value="17:30">17:30</option>
+                <option value="17:45">17:45</option>
+                <option value="18:00">18:00</option>
+                <option value="18:15">18:15</option>
+                <option value="18:30">18:30</option>
+                <option value="18:45">18:45</option>
+                <option value="19:00">19:00</option>
+                <option value="19:15">19:15</option>
+                <option value="19:30">19:30</option>
+                <option value="19:45">19:45</option>
+                <option value="20:00">20:00</option>
+            </select>
           </div>
-          <button type="submit" class="btn btn-blue">Submit</button>
+
+          <div class="form-group">
+            <h3>勉強する科目</h3>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="subject-humanities" value="humanities">
+              <label class="form-check-label" for="subject-humanities">文系科目</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="subject-sciences" value="sciences">
+              <label class="form-check-label" for="subject-sciences">理数科目</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h3>課題の有無</h3>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="task" id="task-exists" value="exists" checked>
+              <label class="form-check-label" for="task-exists">ある</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="task" id="task-none" value="none">
+              <label class="form-check-label" for="task-none">ない</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h3>希望勉強時間</h3>
+            <label for="study-hours"><span class="range-value"></span></label>
+            <input type="range" class="custom-range" min="2" max="10" id="study-hours">
+          </div>
+
+          <button type="submit" class="btn btn-block btn-blue">Submit</button>
         </form>
       </section>
     </main>
