@@ -164,9 +164,7 @@
             <input type="range" class="custom-range" min="2" max="10" value="2" id="study-hours">
           </div>
 
-          <a href="assets/images/schedule.jpg" target="_blank" class="text-decoration-none">
-            <button type="button" class="btn btn-block btn-blue">Submit</button>
-          </a>
+          <button type="button" class="btn btn-block btn-blue submit-forms-btn">Submit</button>
         </form>
       </section>
     </main>
@@ -180,6 +178,12 @@
     $('#study-hours').change( function() {
       $range.text($(this).val());
     });
+
+    $('.submit-forms-btn').click(function() {
+      alert('ご提供いただいた情報をもとにスケジュールの提案を作成します。');
+      window.open('assets/images/schedule.jpg', '_blank');
+    });
+
   </script>
   </body>
 </html>
