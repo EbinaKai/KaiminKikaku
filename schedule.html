@@ -134,7 +134,37 @@
             </select>
           </div>
 
-          <button type="submit" class="btn btn-blue">Submit</button>
+          <div class="form-group">
+            <h3>勉強する科目</h3>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="subject-humanities" value="humanities">
+              <label class="form-check-label" for="subject-humanities">文系科目</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="subject-sciences" value="sciences">
+              <label class="form-check-label" for="subject-sciences">理数科目</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h3>課題の有無</h3>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="task" id="task-exists" value="exists" checked>
+              <label class="form-check-label" for="task-exists">ある</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="task" id="task-none" value="none">
+              <label class="form-check-label" for="task-none">ない</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h3>希望勉強時間</h3>
+            <label for="study-hours"><span class="range-value"></span></label>
+            <input type="range" class="custom-range" min="2" max="10" id="study-hours">
+          </div>
+
+          <button type="submit" class="btn btn-block btn-blue">Submit</button>
         </form>
       </section>
     </main>
