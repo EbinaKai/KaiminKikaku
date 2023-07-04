@@ -53,6 +53,9 @@ $(document).ready(function() {
         .text(data[current_q][key]);
     }
 
+    // set image
+    $('#quiz img.img-fluid').attr('src', 'assets/images/quiz/quiz-' + String(data[current_q].id) + '.jpg');
+
     // shuffle elements
     let elements = $('.ans button')
     elements.shuffle();
@@ -63,16 +66,15 @@ $(document).ready(function() {
       let key = "anser_" + String(i);
       $(`[data-id='${key}']`).click(function() {checkAns(i); });
     }
-    
   }
 
   function checkAns(i) {
-    const result = data[current_q].collect_anser == i;
+    const result = (1 == i);
     if ( result ) { correct_count ++; }
     result_store.push(
       {
         question: data[current_q].question,
-        correct_anser: data[current_q]["anser_" + String(data[current_q].collect_anser)],
+        correct_anser: data[current_q]["anser_1"],
         your_anser: data[current_q]["anser_" + String(i)]
       }
     )
