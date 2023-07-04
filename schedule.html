@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="G8">
+  <title>勉強スケジュール生成 | 快眠企画</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/hamberger.css">
+
+  <!-- javascript -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header class="d-flex align-items-center flex-grow-1 sticky-top">
+      <input type="checkbox" id="overlay-input" />
+      <label for="overlay-input" id="overlay-button"><span></span></label>
+      <nav id="overlay">
+        <ul class="uppercase-text d-flex gap-2 justify-content-between align-items-center mb-0">
+          <li><a href="index.html">快眠企画</a></li>
+          <li><a href="risk.html">risk</a></li>
+          <li><a href="study.html">study</a></li>
+          <li><a href="quality.html">quality</a></li>
+          <li><a href="community.html">community</a></li>
+          <li><a href="implementation.html">implementation</a></li>
+          <li><a href="quiz.html">quiz</a></li>
+          <li><a href="aboutus.html">about us</a></li>
+      </nav>
+    </header>
+    
+    <main>
+      <h1 class="text-center mb-5">勉強スケジュール生成</h1>
+
+      <section class="container mb-3">
+        <h2>勉強スケジュールを提案するにあたって</h2>
+        <p>スケジュール作成に必要な情報を収集するためのフォームを作成しました。ご協力いただければ幸いです。</p>
+      </section>
+
+      <section class="container mb-3">
+        <h2>あなたの生活について教えてください</h2>
+        <form class="mb-2"> 
+          <div class="form-group">
+            <h3>年齢</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="age" id="age-childish" value="childish">
+                <label class="form-check-label" for="age-childish">10～13歳</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="age" id="age-young" value="young"  checked>
+                <label class="form-check-label" for="age-young">14～18歳</label>
+              </div>
+          </div>
+          <div class="form-group">
+            <h3>モード選択</h3>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="mode-study" value="study" checked>
+                <label class="form-check-label" for="mode-study">勉強用</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="mode-general" value="general">
+                <label class="form-check-label" for="mode-general">一般用</label>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="InputEmail">Email</label>
+            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="FormControlTextarea">Message</label>
+            <textarea class="form-control" id="FormControlTextarea" rows="5" placeholder="Message here"></textarea>
+          </div>
+          <button type="submit" class="btn btn-blue">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+		  © G8-2
+    </footer>
+    </div>
+  </body>
+</html>
