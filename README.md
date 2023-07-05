@@ -15,12 +15,25 @@
 ## Dockerによる仮想環境の作成
 
 1. phpブランチをプルする  
-  ```git pull php```
+
+  ```bash
+  git pull origin php:php  
+  git pull php
+  ```  
+
 2. [DockerDesktopの公式サイト](https://www.docker.com/products/docker-desktop/)から使用しているOSに合ったバージョンをダウンロード
 3. インストーラーを使ってアプリをインストールする。
 4. インストールの成功を確認  
-  ```docker --version```
+  
+  ```bash
+  docker --version
+  ```
+
 5. `./IntegratedPBL_G8` にいることを確認する  
 6. コンテナをcomposeする  
-  ```docker-compose up -d```
+  
+  ```bash
+  docker-compose up -d
+  ```
+
 7. [Webサーバー](http://localhost:8080)にアクセスする。
